@@ -49,7 +49,7 @@ CHIP CPU {
 
     // D register
     And(a=instruction[4], b=instruction[15], out=loaddreg);
-    DRegister(in=aluoutput, load=loaddreg, out=doutput); 
+    Register(in=aluoutput, load=loaddreg, out=doutput); 
 
     // Writemem
     And(a=instruction[3], b=instruction[15], out=writeM);
